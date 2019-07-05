@@ -12,7 +12,7 @@ project = ${project}
 all: \$(project).pdf
 
 \$(project).pdf: \$(project).tex Dockerfile
-	latexmk -g $< </dev/null
+	latexmk -bibtex -lualatex -g $< </dev/null
 
 clean:
 	latexmk -C
